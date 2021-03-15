@@ -60,18 +60,11 @@ namespace AutomationTest.APITest
                 /* As the variable "body" was unable to return a valid JSON file 
                    I was able to check the HTTP Status code, but not its description. */
                 Assert.AreEqual((int)response.StatusCode, expectedBehaviour);
-
-
-
             }
             catch (Exception e)
             {
                 Assert.Fail(e.Message);
             }
-
-
-
-
         }
         [Test]
         public void ThirdTest()
@@ -90,9 +83,6 @@ namespace AutomationTest.APITest
                    I was able to check the HTTP Status code, but not its description. */
                 Assert.AreEqual((int)response.StatusCode, expectedBehaviour);
             }
-
-
-
             catch (Exception e)
             {
                 Assert.Fail(e.Message);

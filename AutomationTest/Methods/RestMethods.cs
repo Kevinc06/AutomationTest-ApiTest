@@ -5,12 +5,10 @@ using System.Text;
 
 namespace AutomationTest.Methods
 {
-
     public static class RestMethods
     {
         /* I create and instantiate an object called "client" of type HttpClient responsible for sending / receiving an HTTP request. */
         public static HttpClient client = new HttpClient();
-
 
         /* An object of type HttpResponseMessage was created called "ReturnGet" with the following parameter (string Url) 
            that will be responsible for returning the content contained in the passed Url */
@@ -21,8 +19,7 @@ namespace AutomationTest.Methods
             HttpRequestMessage message = new HttpRequestMessage
             {
                 /* Create an object called "Method" responsible for receiving a HttpMethod "GET" used when the client would like to obtain server resources */
-                Method = new HttpMethod("GET"), 
-                /* */
+                Method = new HttpMethod("GET"),
                 RequestUri = new Uri(Url)
             };
 
@@ -31,11 +28,7 @@ namespace AutomationTest.Methods
             HttpResponseMessage response = client.SendAsync(message).Result;
             return response;
         }
-
-
     }
-
-
 }
 
 
